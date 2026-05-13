@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-press-start: 'Press Start 2P', cursive;
+    --font-vt323: 'VT323', monospace;
+  }
+  
+  body {
+    font-family: var(--font-vt323);
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  }
+}
+
+@layer utilities {
+  .font-pixel {
+    font-family: var(--font-press-start);
+  }
+  
+  .font-mono {
+    font-family: var(--font-vt323);
+  }
+  
+  .animate-scan {
+    animation: scan 1s linear;
+  }
+  
+  @keyframes scan {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+  
+  .pixelated {
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: pixelated;
+  }
+}
